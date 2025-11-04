@@ -80,12 +80,12 @@ export async function updateClientResources(
         //
         // Recommended practice:
         //   Use unique names per site: app-host1, app-host2
-        if (existingResource && siteId && existingResource.siteId !== siteId) {
+        if (existingResource && existingResource.siteId !== site.siteId) {
             // Get site information for better error messaging
             const [currentSite] = await trx
                 .select({ niceId: sites.niceId, name: sites.name })
                 .from(sites)
-                .where(eq(sites.siteId, siteId))
+                .where(eq(sites.siteId, site.siteId))
                 .limit(1);
 
             const [existingSite] = await trx

@@ -17,7 +17,7 @@ import {
     users
 } from "@server/db";
 import { resources, targets, sites } from "@server/db";
-import { eq, and, asc, or, ne, count, isNotNull } from "drizzle-orm";
+import { eq, and, asc, or, ne, count, isNotNull, inArray } from "drizzle-orm";
 import {
     Config,
     ConfigSchema,
@@ -199,7 +199,7 @@ export async function updateProxyResources(
                 (target) => target.siteId !== siteId
             );
 
-            if (hasTargetsFromDifferentSite && existingTargets.length > 0) {
+            if (hasTargetsFromDifferentSite) {
                 // Get site information for better error messaging
                 const [currentSite] = await trx
                     .select({ niceId: sites.niceId, name: sites.name })
@@ -213,9 +213,7 @@ export async function updateProxyResources(
                 const existingSites = await trx
                     .select({ niceId: sites.niceId, name: sites.name })
                     .from(sites)
-                    .where(
-                        or(...existingSiteIds.map((id) => eq(sites.siteId, id)))
-                    );
+                    .where(inArray(sites.siteId, existingSiteIds));
 
                 const existingSiteNames = existingSites
                     .map((s) => s.name || s.niceId)
