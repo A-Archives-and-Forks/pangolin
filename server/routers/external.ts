@@ -47,7 +47,6 @@ import createHttpError from "http-errors";
 import { build } from "@server/build";
 import { createStore } from "#dynamic/lib/rateLimitStore";
 import { logActionAudit } from "#dynamic/middlewares";
-import { log } from "console";
 
 // Root routes
 export const unauthenticated = Router();
