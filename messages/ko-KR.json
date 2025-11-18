@@ -1430,6 +1430,9 @@
         "and": "및",
         "privacyPolicy": "개인 정보 보호 정책"
     },
+    "signUpMarketing": {
+        "keepMeInTheLoop": "Keep me in the loop with news, updates, and new features by email."
+    },
     "siteRequired": "사이트가 필요합니다.",
     "olmTunnel": "Olm 터널",
     "olmTunnelDescription": "클라이언트 연결에 Olm 사용",
