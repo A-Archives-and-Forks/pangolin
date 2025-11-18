@@ -1430,6 +1430,9 @@
         "and": "和",
         "privacyPolicy": "隐私政策"
     },
+    "signUpMarketing": {
+        "keepMeInTheLoop": "Keep me in the loop with news, updates, and new features by email."
+    },
     "siteRequired": "需要站点。",
     "olmTunnel": "Olm 隧道",
     "olmTunnelDescription": "使用 Olm 进行客户端连接",
