@@ -1430,6 +1430,9 @@
         "and": "и",
         "privacyPolicy": "политика конфиденциальности"
     },
+    "signUpMarketing": {
+        "keepMeInTheLoop": "Keep me in the loop with news, updates, and new features by email."
+    },
     "siteRequired": "Необходимо указать сайт.",
     "olmTunnel": "Olm Туннель",
     "olmTunnelDescription": "Используйте Olm для подключений клиентов",
