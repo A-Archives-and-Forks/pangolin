@@ -1430,6 +1430,9 @@
         "and": "und",
         "privacyPolicy": "Datenschutzrichtlinie"
     },
+    "signUpMarketing": {
+        "keepMeInTheLoop": "Keep me in the loop with news, updates, and new features by email."
+    },
     "siteRequired": "Standort ist erforderlich.",
     "olmTunnel": "Olm-Tunnel",
     "olmTunnelDescription": "Nutzen Sie Olm für die Kundenverbindung",
